@@ -22,7 +22,7 @@ export default function PaymentMethods() {
   const bnplDates = useMemo(() => ['10 Oct', '10 Nov', '10 Dec'], []);
 
   return (
-    <div className="mx-auto w-full max-w-md -mt-8 rounded-2xl bg-white p-4 shadow-xl ring-1 ring-slate-200">
+    <div className="mx-auto w-full max-w-md -mt-6 rounded-2xl bg-white p-4 shadow-xl ring-1 ring-slate-200" aria-label="Payment methods">
       {/* Cards */}
       <Section title="CREDIT & DEBIT CARDS">
         <div className="divide-y divide-slate-200">
@@ -115,7 +115,7 @@ export default function PaymentMethods() {
 
 function Section({ title, highlight = false, children }) {
   return (
-    <section className={`mb-4 rounded-xl ${highlight ? 'bg-white ring-1 ring-teal-200/60' : 'bg-white ring-1 ring-slate-200'}`}>
+    <section className={`mb-4 rounded-xl ${highlight ? 'bg-white ring-1 ring-teal-200/60' : 'bg-white ring-1 ring-slate-200'}`} aria-label={title}>
       <div className={`rounded-t-xl border-b ${highlight ? 'border-teal-100 bg-teal-50/60 text-teal-800' : 'border-slate-100 bg-slate-50 text-slate-700'} px-4 py-2 text-[11px] font-semibold tracking-wide`}>
         {title}
       </div>
